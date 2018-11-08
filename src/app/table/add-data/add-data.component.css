@@ -1,0 +1,36 @@
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+.examples{
+  margin: 15px 0px 0px 150px;
+  width: 120px;
+  font-size: 16px;
+  font-weight: 600;
+  color: darkred;
+}
+.logindiv{
+  margin-left: 700px;
+  margin-top: 200px;
+}
+
+.loadExcelInput{
+  border:1px solid darkgray;
+  width:95vw;
+  margin-top:5px;
+  padding:2px 0px 2px 0px;
+}
+.exportExcel{
+  border:1px solid darkgray;
+  width:95vw;
+  margin-top:5px;
+  padding:2px 0px 2px 0px;
+}
+p{
+  font-weight: bold
+}

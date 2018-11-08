@@ -1,0 +1,20 @@
+.example-icon {
+    padding: 0 14px;
+  }
+  
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+  .headname{
+      margin-left: 250px;
+      font-size: 35px;
+    }
+.dashboard{
+    margin-left: 40px;
+    cursor: pointer;
+  }
+.logoutIcon{
+  font-size: 20px;
+  margin-right: 250px;
+  height: 50px;
+}

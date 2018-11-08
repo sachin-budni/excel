@@ -1,0 +1,17 @@
+
+<div class="logindiv">
+    <div class="logindivs">
+        <form class="example-form">
+            
+            <mat-form-field class="example-full-width">
+                <input matInput  type="email" placeholder="Email" #email>
+            </mat-form-field>
+            
+            <mat-form-field class="example-full-width">
+                <input matInput type="password" placeholder="Password" #password>
+            </mat-form-field>
+            
+            <button  mat-raised-button (click)="signUp(email.value,password.value)">SignUp</button><br/>
+        </form>
+    </div>
+</div>

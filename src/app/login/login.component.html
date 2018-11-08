@@ -1,0 +1,21 @@
+<!-- Email :<input id="email" type="email" #email><br/>
+Password :<input id="password" type="password" #password><br/>
+<button (click)="login(email.value,password.value)">LogIn</button> -->
+<div class="logindiv">
+    <div class="logindivs">
+        <form class="example-form">
+            
+            <mat-form-field class="example-full-width">
+                <input matInput  type="email" placeholder="Email" #email>
+            </mat-form-field>
+            
+            <mat-form-field class="example-full-width">
+                <input matInput type="password" placeholder="Password" #password>
+            </mat-form-field>
+            
+            <button  mat-raised-button (click)="login(email.value,password.value)">LogIn</button><br/>
+
+            <button  mat-raised-button color="primary" (click)="googlelogin()">Google LogIn</button>
+        </form>
+    </div>
+</div>

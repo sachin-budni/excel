@@ -1,0 +1,58 @@
+<!-- Id :<input [(ngModel)]="student.Id"><br/>
+Name :<input [(ngModel)]="student.Name"><br/>
+Age :<input type="number" [(ngModel)]="student.Age"><br/>
+Desc :<input [(ngModel)]="student.Desc"><br/>
+<button (click)="addStudent(student)">submit</button> -->
+
+
+<div class="logindiv">
+    <div class="logindivs">
+        <div class="example-form">       
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Name" #name required>
+                </mat-form-field>         
+                <mat-form-field class="example-full-width">
+                    <input type="number" matInput placeholder="Age" #age required>
+                </mat-form-field>         
+                <mat-form-field class="example-full-width">
+                    <textarea matInput placeholder="Desc" #desc></textarea>
+                </mat-form-field>
+
+                <input type="file" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" (change)="UploadExcelFile($event)"><br/>
+
+            <button  mat-raised-button (click)="addStudent(name.value,age.value,desc.value)" class="examples">Submit</button>
+        </div>
+    </div>
+</div>
+<!-- <div class="example-container">
+    <mat-form-field>
+      <input matInput placeholder="Input">
+    </mat-form-field>
+  
+    <mat-form-field>
+      <textarea matInput placeholder="Textarea"></textarea>
+    </mat-form-field>
+  
+    <mat-form-field>
+      <mat-select placeholder="Select">
+        <mat-option value="option">Option</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div> -->
+
+  <div class="container" *ngIf="table.downloadURL | async; let url">
+    <img [src]="url" alt="Image from AngularFireStorage">
+  </div>
+<button (click)="onFileChange()">click</button>
+<div class='maincontainer'>
+    <gc-spread-sheets [hostStyle]="hostStyle" (workbookInitialized)="workbookInit($event)">
+    </gc-spread-sheets>
+    <div class='loadExcelInput'>
+        <p>Open Excel File</p>
+      <input type="file" name="files[]" multiple id="jsonFile" accept=".xlsx" (change)="onFileChanges($event)" />
+    </div>
+    <div class='exportExcel'>
+        <p>Save Excel File</p>
+        <!-- <button (click)="onClickMe($event)">Save Excel!</button> -->
+    </div>
+    </div>

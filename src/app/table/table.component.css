@@ -1,0 +1,14 @@
+table {
+    width: 80%;
+  }
+  .addIconButton{
+    float: right;
+    margin: 25px 400px 15px 0px
+  }
+  :host .mat-button{
+    font-size: 16px !important;
+    font-weight: 600 !important;
+  }
+  :host .mat-icon{
+    height: 28px !important;
+  }

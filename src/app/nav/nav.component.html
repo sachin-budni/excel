@@ -1,0 +1,10 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span class="headname">WillntriX</span>
+    <span class="dashboard" *ngIf="sign.flag == 'logout'" routerLink="Table">DashBoard</span>
+    <span class="example-spacer"></span>
+    <button mat-button class="logoutIcon" *ngIf="sign.flag == 'login'" (click)="sign.flag='signup'" routerLink="/Login"><mat-icon class="example-icon">power_settings_new</mat-icon>LogIn</button>
+    <button mat-button class="logoutIcon" *ngIf="sign.flag == 'logout'" (click)="signout()"><mat-icon class="example-icon">power_settings_new</mat-icon>LogOut</button>
+    <button mat-button class="logoutIcon" *ngIf="sign.flag == 'signup'" (click)="sign.flag='login'" routerLink="/Signup"><mat-icon class="example-icon">power_settings_new</mat-icon>SingUp</button>
+  </mat-toolbar-row>
+</mat-toolbar>
