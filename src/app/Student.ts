@@ -1,8 +1,9 @@
+import { UploadExcelFile } from "./UploadExcelFile";
 
 export class Student{
     Id:string;
     Name:string;
     Age:Number;
     Desc:string;
-    // ExcelFileUpload:UploadExcelFile;// = new UploadExcelFile();
+    ExcelFileUpload:UploadExcelFile = new UploadExcelFile();
 }

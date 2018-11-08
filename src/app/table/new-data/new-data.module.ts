@@ -9,6 +9,7 @@ import { RouterModule } from '@angular/router';
 import { routes } from 'src/app/routing';
 import { SpreadSheetsModule } from "@grapecity/spread-sheets-angular";
 import { HttpClientModule } from '@angular/common/http';
+import { ExcelPageComponent } from '../excel-page/excel-page.component';
 
 @NgModule({
   imports: [
@@ -16,7 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
     RouterModule.forRoot(routes),MatButtonModule,MatIconModule,
     MatInputModule,SpreadSheetsModule,HttpClientModule
   ],
-  declarations: [AddDataComponent,TableComponent],
+  declarations: [AddDataComponent,TableComponent,ExcelPageComponent],
   
   providers: [TableService],
 })

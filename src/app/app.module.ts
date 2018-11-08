@@ -19,13 +19,15 @@ import {MatTableModule, MatToolbarModule, MatIconModule, MatButtonModule, MatInp
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NewDataModule } from './table/new-data/new-data.module';
 import { NavComponent } from './nav/nav.component';
+// import { ExcelPageComponent } from './table/excel-page/excel-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignUpComponent,
     LoginComponent,
-    NavComponent
+    NavComponent,
+    // ExcelPageComponent
   ],
   imports: [
     BrowserModule,AngularFireModule.initializeApp(environment.config),

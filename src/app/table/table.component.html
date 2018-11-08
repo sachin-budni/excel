@@ -6,22 +6,39 @@
 
   <ng-container matColumnDef="Id">
     <th mat-header-cell *matHeaderCellDef> ID </th>
-    <td mat-cell *matCellDef="let element" title="element.Id"> {{element.Id}} </td>
+    <td mat-cell *matCellDef="let element" title="{{element.Id}}"> {{element.Id}} </td>
   </ng-container>
 
   <ng-container matColumnDef="Name">
     <th mat-header-cell *matHeaderCellDef> NAME </th>
-    <td mat-cell *matCellDef="let element" title="element.Name"> {{element.Name}} </td>
+    <td mat-cell *matCellDef="let element" title="{{element.Name}}"> {{element.Name}} </td>
   </ng-container>
 
   <ng-container matColumnDef="Age">
     <th mat-header-cell *matHeaderCellDef> AGE </th>
-    <td mat-cell *matCellDef="let element" title="element.Age"> {{element.Age}} </td>
+    <td mat-cell *matCellDef="let element" title="{{element.Age}}"> {{element.Age}} </td>
   </ng-container>
 
   <ng-container matColumnDef="Desc">
     <th mat-header-cell *matHeaderCellDef> DESC </th>
-    <td mat-cell *matCellDef="let element" title="element.Desc"> {{element.Desc}} </td>
+    <td mat-cell *matCellDef="let element" title="{{element.Desc}}"> {{element.Desc}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="FileName">
+    <th mat-header-cell *matHeaderCellDef> FileName </th>
+    <td mat-cell *matCellDef="let element" title="{{element.FileDetails.FileName}}"> {{element.FileDetails.FileName}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Time">
+    <th mat-header-cell *matHeaderCellDef> Time </th>
+    <td mat-cell *matCellDef="let element" title="{{element.FileDetails.Time | date:'fullDate'}}"> {{element.FileDetails.Time | date:'fullDate'}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Image">
+    <th mat-header-cell *matHeaderCellDef>  </th>
+    <td mat-cell *matCellDef="let element" title="download">
+      <img src="./../../assets/excel.png" style="width: 40px;height: 40px;" (click)="downloadFile(element.FileDetails.Url)"> 
+    </td>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
